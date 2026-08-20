@@ -21,10 +21,8 @@ Clases de Backend con Django
     </ul>
     <li><strong>Actualización de PIP</strong></li>
     <ul>
-        <li>MPara actualizar PIP, ejecutamos el siguiente comando en nuestro terminal:<br><code>python -m pip install --upgrade pip</code></li>
-        <li>Para activar el ambiente virtual, ejecutamos el siguiente comando en el terminal:<br><code>.\Activate</code></li>
-        <li>Si no se puede ejecutar el comando, debemos darle permisos al terminal, mediante el siguiente comando:<br><code>Set-ExecutionPolicy Bypass -Scope CurrentUser</code></li>
-        <li>Habiendo ejecutado este comando, ya deberíamos poder ejecutar el comando anterior y activar nuestro ambiente virtual.</li>
+        <li>A pesar de haber generado un instlación nueva desde 0 del entorno, no está aegurado que contenga la última versión de PIP, por lo que debemos actualizarlo.</li>
+        <li>Para actualizarlo, ejecutamos el siguiente comando en nuestro terminal:<br><code>python -m pip install --upgrade pip</code></li>
     </ul>
     <li></li>
     <li></li>

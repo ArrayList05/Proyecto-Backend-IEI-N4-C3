@@ -1,32 +1,59 @@
 # IEI_N4_C3
 Clases de Backend con Django
 
-<h3>Creación de Proyectos con Django</h3>
-<hr>
-<br>
-<ol>
-    <li><strong>Creación de Ambiente Virtual</strong></li>
-    <ul>
-        <li>Un ambiente virtual mantendrá asilada toda la configuración de nuestro proyecto y su entorno de trabajo.</li>
-        <li>Habiendo creado nuestro repositorio, abrimos la carpeta contenedora en VS Code.</li>
-        <li>Estando ubicados en el directorio principal, iniciamos un nuevo terminal.</li>
-        <li>Para crear el ambiente virtual, ejecutamos el siguiente comando en el terminal:<br><code>python -m venv nombre_ambiente</code></li>
-    </ul>
-    <li><strong>Activación de Ambiente Virtual</strong></li>
-    <ul>
-        <li>Mediante el terminal accedemos al directorio creado anteriormente, ejecutando el siguiente comando:<br><code>cd nombre_ambiente\Scripts</code></li>
-        <li>Para activar el ambiente virtual, ejecutamos el siguiente comando en el terminal:<br><code>.\Activate</code></li>
-        <li>Si no se puede ejecutar el comando, debemos darle permisos al terminal, mediante el siguiente comando:<br><code>Set-ExecutionPolicy Bypass -Scope CurrentUser</code></li>
-        <li>Habiendo ejecutado este comando, ya deberíamos poder ejecutar el comando anterior y activar nuestro ambiente virtual.</li>
-    </ul>
-    <li><strong>Actualización de PIP</strong></li>
-    <ul>
-        <li>A pesar de haber generado un instlación nueva desde 0 del entorno, no está aegurado que contenga la última versión de PIP, por lo que debemos actualizarlo.</li>
-        <li>Para actualizarlo, ejecutamos el siguiente comando en nuestro terminal:<br><code>python -m pip install --upgrade pip</code></li>
-    </ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-</ol>
+## Creación de Proyectos con Django
+
+1. **Creación de Ambiente Virtual**
+    - Un ambiente virtual mantendrá asilada toda la configuración de nuestro proyecto y su entorno de trabajo.- Habiendo creado nuestro repositorio, abrimos la carpeta contenedora en VS Code.</li>
+    - Estando ubicados en el directorio principal, iniciamos un nuevo terminal.</li>
+    - Para crear el ambiente virtual, ejecutamos el siguiente comando en el terminal:
+    ```
+    python -m venv nombre_ambiente
+    ```
+    
+2. **Activación de Ambiente Virtual**
+    - Mediante el terminal accedemos al directorio creado anteriormente, ejecutando el siguiente comando:
+    ```
+    cd nombre_ambiente\Scripts
+    ```
+    - Para activar el ambiente virtual, ejecutamos el siguiente comando en el terminal:
+    ```
+    .\Activate
+    ```
+    - Si no se puede ejecutar el comando, debemos darle permisos al terminal, mediante el siguiente comando:
+    ```
+    Set-ExecutionPolicy Bypass -Scope CurrentUser
+    ```
+    - Habiendo ejecutado este comando, ya deberíamos poder ejecutar el comando anterior y activar nuestro ambiente virtual.
+    - Si necesitamos desactivar el ambiente virtual, usaremos el comando:
+    ```
+    deactivate
+    ```
+
+3. **Actualización de PIP**
+    - A pesar de haber generado un instalación del entorno desde 0, no está asegurado que contenga la última versión de PIP, por lo que debemos actualizarlo.
+    - Para actualizarlo, ejecutamos el siguiente comando en nuestro terminal:
+    ```
+    python -m pip install --upgrade pip
+    ```
+
+4. **Instalación de Entorno Django**
+    - Mediante terminal nos ubicamos en el directorio raíz de la aplicación.
+    - Una vez ubicado el terminal en el directorio raíz, ejecutaremos el siguiente comando:
+    ```
+    pip install django
+    ```
+    - El comando anterior instaló todas las dependencias necesarias para que Django pueda trabajar.
+    - Crearemos el entorno de trabajo de Django mediante el comando:
+    ```
+    django-admin startproject motor_django .
+    ```
+    - Este comando creó la estructura de archivos de Django, es un directorio que contiene los archivos de configuración. 
+        - settings.py, contiene configuraciones generales, como la conexión a base de datos.
+        - urls.py, contiene las rutas para redirigir las solicitudes que lleguen a la aplicación.
+
+5. **Creación de la Aplicación**
+    - Para crear la aplicación que debemos construir, ejecutaremos el siguiente comando mediante terminal:
+    ```
+    django-admin startapp nombre_aplicacion
+    ```

@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Renderizado de página de bienvenida
+def bienvenida(request):
+    return render(request, 'bienvenida.html')

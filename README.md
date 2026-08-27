@@ -57,3 +57,8 @@ Clases de Backend con Django
     ```
     django-admin startapp nombre_aplicacion
     ```
+    - Cuando la estructura de archivos de la aplicación a construir ya ha sifo generada, ya podemos iniciar la el servidor de la aplicación, ejecutando el siguiente comando en el terminal:
+    ```
+    python manage.py runserver
+    ```
+    - Este comando inicia el servidor, el que se carga en la url http://127.0.0.1:8000.

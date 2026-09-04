@@ -8,7 +8,7 @@ de pacientes, dueños y atenciones medicas veterinarias.
 ```bash
 python -m venv ambiente1
 .\ambiente1\Scripts\activate
-´´´
+
 3. instalar dependencias
 
 pip install -r requirements.txt

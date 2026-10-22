@@ -1,0 +1,186 @@
+[
+    {
+        "model": "incidencias.veterinario",
+        "pk": 1,
+        "fields": {
+            "rut": "12345678-9",
+            "nombre": "Juan",
+            "apellido": "Pérez",
+            "telefono": "123456789",
+            "especialidad": "Veterinario General"
+        }
+    },
+    {
+        "model":"incidencias.duenyo",
+        "pk": 1,
+        "fields": {
+            "rut": "98765432-1",
+            "nombre": "María",
+            "apellido": "González",
+            "telefono": "987654321",
+            "direccion": "Avenida Siempreviva 123",
+            "email": "maria.gonzalez@example.com"
+        }
+    },
+    {
+        "model": "incidencias.mascota",
+        "pk": 1,
+        "fields": {
+            "nombre": "Firulais",
+            "especie": "Perro",
+            "raza": "Labrador",
+            "edad": 3,
+            "duenyo": 1
+        }
+    },
+    {
+        "model": "incidencias.incidencia",
+        "pk": 1,
+        "fields": {
+            "descripcion": "El perro presenta síntomas de enfermedad.",
+            "fecha": "2026-06-01",
+            "mascota": 1,
+            "veterinario": 1
+        }
+    },
+    {
+        "model": "incidencias.historial",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "El perro fue diagnosticado con una alergia leve tras recibir la vacuna antirrábica.",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model":"incidencias.tratamiento",
+        "pk": 1,
+        "fields": {
+            "nombre": "Antibiótico",
+            "descripcion": "Tratamiento con antibióticos para la alergia.",
+            "fecha_inicio": "2026-06-02",
+            "fecha_fin": "2026-06-09",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model":"incidencias.vacuna",
+        "pk": 1,
+        "fields": {
+            "nombre": "Vacuna antirrábica",
+            "descripcion": "Vacuna para prevenir la rabia.",
+            "fecha_aplicacion": "2026-06-01",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.cita",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "hora": "10:00:00",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.pago",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "monto": 50000,
+            "metodo_pago": "Tarjeta de crédito",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.receta",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "Receta para el tratamiento del perro.",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model":"incidencias.examen",
+        "pk": 1,
+        "fields": {
+            "nombre": "Examen de sangre",
+            "descripcion": "Examen para evaluar la salud general del perro.",
+            "fecha_realizacion": "2026-06-01",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+       "model": "incidencias.diagnostico", 
+       "pk": 1,
+       "fields": {
+           "fecha": "2026-06-01",
+           "descripcion": "El perro fue diagnosticado con una alergia leve.",
+           "motivo_diagnostico": "Reacción a la vacuna antirrábica",
+           "veterinario": 1,
+           "mascota": 1
+       }
+    },
+    {
+        "model": "incidencias.historia_clinica",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "Historial clínico del perro.",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.consulta",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "Consulta para evaluar la salud del perro.",
+            "motivo_consulta": "Chequeo general",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.cirugia",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "Cirugía para tratar una herida en el perro.",
+            "motivo_cirugia": "Herida profunda en la pata",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model": "incidencias.hospitalizacion",
+        "pk": 1,
+        "fields": {
+            "fecha": "2026-06-01",
+            "descripcion": "Hospitalización del perro para observación.",
+            "motivo_hospitalizacion": "Observación post-cirugía",
+            "veterinario": 1,
+            "mascota": 1
+        }
+    },
+    {
+        "model":"incidencias.urgencia",
+        "pk": 1,
+        "fields":{
+            "fecha":"2026-06-01",
+            "descripcion":"El perro presentó una reacción alérgica severa y requirió atención inmediata.",
+            "motivo_urgencia":"Reacción alérgica severa",
+            "veterinario":1,
+            "mascota":1
+        }
+    }
+]

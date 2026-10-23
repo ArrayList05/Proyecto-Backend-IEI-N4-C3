@@ -1,7 +1,9 @@
 from django.contrib import admin
-from .models import Veterinario, Duenyo, Mascota, Incidencia, Historial, Tratamiento, Vacuna, Cita, Pago, Receta, Examen, Diagnostico, HistoriaClinica, Consulta, Cirugia, Hospitalizacion, Urgencia
+from django.contrib.auth.admin import UserAdmin
+from .models import User, Veterinario, Duenyo, Mascota, Incidencia, Historial, Tratamiento, Vacuna, Cita, Pago, Receta, Examen, Diagnostico, HistoriaClinica, Consulta, Cirugia, Hospitalizacion, Urgencia
 
 # Register your models here.
+admin.site.register(User, UserAdmin)
 admin.site.register(Veterinario)
 admin.site.register(Duenyo)
 admin.site.register(Mascota)

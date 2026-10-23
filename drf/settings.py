@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'drf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME', default='sistema_veterinaria'),
+        'USER': config('DB_USER', default='vete_user'),
+        'PASSWORD': config('DB_PASSWORD', default='humita_123'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='3306'),
     }
 }
 
@@ -127,4 +131,19 @@ MAILERS = {
     'default': {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
+}
+
+AUTH_USER_MODEL = 'incidencias.User'
+
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
+    
+    # Formatos de entrada global aceptados por campos DateTimeFields
+    'DATETIME_INPUT_FORMATS': ['%d-%m-%Y %H:%M:%S', '%d-%m-%Y', 'iso-8601'],
+    
+    # Formato de salida global para campos DateFields
+    'DATE_FORMAT': '%d-%m-%Y',
+    
+    # Formatos de entrada global aceptados por campos DateFields
+    'DATE_INPUT_FORMATS': ['%d-%m-%Y'],
 }

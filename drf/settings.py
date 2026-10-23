@@ -147,3 +147,6 @@ REST_FRAMEWORK = {
     # Formatos de entrada global aceptados por campos DateFields
     'DATE_INPUT_FORMATS': ['%d-%m-%Y'],
 }
+
+LOGIN_REDIRECT_URL = '/' # Redirige a la página de inicio después de iniciar sesión
+LOGOUT_REDIRECT_URL = '/login/' # Redirige a la página de inicio de sesión después de cerrar sesión

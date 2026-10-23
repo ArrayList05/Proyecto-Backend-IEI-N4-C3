@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión - Sistema Veterinaria</title>
+</head>
+<body>
+    <div style="width: 300px; margin: 50px auto; font-family: Arial, sans-serif;">
+        <h2>Iniciar Sesión</h2>
+        
+        <!-- Mostrar errores si las credenciales son incorrectas -->
+        {% if form.errors %}
+            <p style="color: red;">Usuario o contraseña incorrectos. Inténtalo de nuevo.</p>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" style="padding: 10px 15px;">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>
